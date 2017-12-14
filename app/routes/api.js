@@ -1,5 +1,5 @@
 var member = require('../models/member'); // Import User Model
-var ans = require('../models/answer'); // Import User Model
+var Ans = require('../models/answer'); // Import User Model
 
 
 module.exports = function (router) {
@@ -19,11 +19,11 @@ module.exports = function (router) {
         mem.regnum=req.body.regnum;
         mem.mess= req.body.mess;
         if(req.body.regnum === null|| req.body.regnum === '' || req.body.mess===null || req.body.mess===''){
-            res.json({sucess:false, message:"NOT DONE"});
+            res.json({success:false, message:"NOT DONE"});
         }
         else{
             mem.save(function(err){
-               if(err.errors!=null){
+               if(err){
                    res.json({success:false, message:err});
                }
                else{
@@ -33,15 +33,15 @@ module.exports = function (router) {
         }
     });
   router.post('/answ',function(req,res) {
-        var ans = new member();
-        ans.name=req.body.name;
+        var ans = new Ans();
+        ans.regnum=req.body.regnum;
         ans.answ= req.body.answ;
-        if(req.body.name === null|| req.body.name=== '' || req.body.answ===null || req.body.answ===''){
-            res.json({sucess:false});
+        if(req.body.regnum === null|| req.body.regnum=== '' || req.body.answ===null || req.body.answ===''){
+            res.json({success:false});
         }
         else{
             ans.save(function(err){
-               if(err.errors!=null){
+               if(err){
                    res.json({success:false, message:err});
                }
                else{

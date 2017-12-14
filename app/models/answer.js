@@ -6,8 +6,8 @@ var titlize  = require('mongoose-title-case'); // Import Mongoose Title Case Plu
 
 // Wish Mongoose Schema
 var answerSchema = new Schema({
-    ans       : { type: String, required: true },
-    name     : { type: String, required: true }
+    answ       : { type: String, required: true },
+    regnum     : { type: String, required: true }
 
 });
 
@@ -17,4 +17,4 @@ answerSchema.plugin(titlize, {
 });
 
 
-module.exports = mongoose.model('ans', answerSchema);
+module.exports = mongoose.model('Ans', answerSchema);

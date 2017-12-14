@@ -1,56 +1,160 @@
 <style xmlns="http://www.w3.org/1999/html">
     @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
-    html{    background:url(http://thekitemap.com/images/feedback-img.jpg) no-repeat;
+    html {
+        background: url(http://thekitemap.com/images/feedback-img.jpg) no-repeat;
         background-size: cover;
-        height:100%;
+        height: 100%;
     }
 
-    #feedback-page{
-        text-align:center;
+    .input {
+        position: relative;
+        font-size: 1.5em;
+        background: #3498db;
+        padding: 3px;
+        display: inline-block;
+        border-radius: 9999em;
     }
 
-    #form-main{
-        width:100%;
-        float:left;
-        padding-top:0px;
+    .input *:not(span) {
+        position: relative;
+        display: inherit;
+        border-radius: inherit;
+        margin: 0;
+        border: none;
+        outline: none;
+        padding: 0 .325em;
+        z-index: 1;
+    }
+
+    .input *:not(span):focus + span {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    .input span {
+        -webkit-transform: scale(0.993, 0.94);
+        transform: scale(0.993, 0.94);
+        -webkit-transition: opacity .25s, -webkit-transform .5s;
+        transition: opacity .25s, -webkit-transform .5s;
+        transition: transform .5s, opacity .25s;
+        transition: transform .5s, opacity .25s, -webkit-transform .5s;
+        opacity: 0;
+        position: absolute;
+        z-index: 0;
+        margin: 4px;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: inherit;
+        pointer-events: none;
+        -webkit-box-shadow: inset 0 0 0 3px #fff, 0 0 0 4px #fff, 3px -3px 30px #1beabd, -3px 3px 30px #10abff;
+        box-shadow: inset 0 0 0 3px #fff, 0 0 0 4px #fff, 3px -3px 30px #1beabd, -3px 3px 30px #10abff;
+    }
+
+    html {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        line-height: 1.5;
+        font-size: 1em;
+    }
+
+    body {
+        text-align: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        /*        -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;*/
+    }
+
+    html, body {
+        height: 100%;
+    }
+
+    input {
+        font-family: inherit;
+        line-height: inherit;
+        color: #2e3750;
+        min-width: 12em;
+    }
+
+    ::-webkit-input-placeholder {
+        color: #cbd0d5;
+    }
+
+    :-ms-input-placeholder {
+        color: #cbd0d5;
+    }
+
+    ::-ms-input-placeholder {
+        color: #cbd0d5;
+    }
+
+    ::placeholder {
+        color: #cbd0d5;
+    }
+
+    html::after {
+        content: '';
+        background: #FFFFFF;
+        height: 3px;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    #feedback-page {
+        text-align: center;
+    }
+
+    #form-main {
+        width: 100%;
+        float: left;
+        padding-top: 0px;
     }
 
     #form-div {
-        background-color:rgba(72,72,72,0.4);
-        padding-left:35px;
-        padding-right:35px;
-        padding-top:35px;
-        padding-bottom:50px;
+        background-color: rgba(72, 72, 72, 0.4);
+        padding-left: 35px;
+        padding-right: 35px;
+        padding-top: 35px;
+        padding-bottom: 50px;
         width: 450px;
         float: left;
         left: 50%;
         position: absolute;
-        margin-top:30px;
+        margin-top: 30px;
         margin-left: -260px;
         -moz-border-radius: 7px;
         -webkit-border-radius: 7px;
     }
 
     .feedback-input {
-        color:#3c3c3c;
+        color: #3c3c3c;
         font-family: Helvetica, Arial, sans-serif;
-        font-weight:500;
+        font-weight: 500;
         font-size: 18px;
         border-radius: 0;
         line-height: 22px;
         background-color: #fbfbfb;
         padding: 13px 13px 13px 54px;
         margin-bottom: 10px;
-        width:100%;
+        width: 100%;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         -ms-box-sizing: border-box;
         box-sizing: border-box;
-        border: 3px solid rgba(0,0,0,0);
+        border: 3px solid rgba(0, 0, 0, 0);
     }
 
-    .feedback-input:focus{
+    .feedback-input:focus {
         background: #fff;
         box-shadow: 0;
         border: 3px solid #3498db;
@@ -59,20 +163,20 @@
         padding: 13px 13px 13px 54px;
     }
 
-    .focused{
-        color:#30aed6;
-        border:#30aed6 solid 3px;
+    .focused {
+        color: #30aed6;
+        border: #30aed6 solid 3px;
     }
 
     /* Icons ---------------------------------- */
-    #name{
+    #name {
         background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
         background-size: 30px 30px;
         background-position: 11px 8px;
         background-repeat: no-repeat;
     }
 
-    #name:focus{
+    #name:focus {
         background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
         background-size: 30px 30px;
         background-position: 8px 5px;
@@ -80,21 +184,21 @@
         background-repeat: no-repeat;
     }
 
-    #email{
+    #email {
         background-image: url(http://rexkirby.com/kirbyandson/images/email.svg);
         background-size: 30px 30px;
         background-position: 11px 8px;
         background-repeat: no-repeat;
     }
 
-    #email:focus{
+    #email:focus {
         background-image: url(http://rexkirby.com/kirbyandson/images/email.svg);
         background-size: 30px 30px;
         background-position: 11px 8px;
         background-repeat: no-repeat;
     }
 
-    #comment{
+    #comment {
         background-image: url(http://rexkirby.com/kirbyandson/images/comment.svg);
         background-size: 30px 30px;
         background-position: 11px 8px;
@@ -105,34 +209,34 @@
         width: 100%;
         height: 150px;
         line-height: 150%;
-        resize:vertical;
+        resize: vertical;
     }
 
     input:hover, textarea:hover,
     input:focus, textarea:focus {
-        background-color:white;
+        background-color: white;
     }
 
-    #button-blue{
+    #button-blue {
         font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-        float:left;
+        float: left;
         width: 100%;
         border: #fbfbfb solid 4px;
-        cursor:pointer;
+        cursor: pointer;
         background-color: #3498db;
-        color:white;
-        font-size:24px;
-        padding-top:22px;
-        padding-bottom:22px;
+        color: white;
+        font-size: 24px;
+        padding-top: 22px;
+        padding-bottom: 22px;
         -webkit-transition: all 0.3s;
         -moz-transition: all 0.3s;
         transition: all 0.3s;
-        margin-top:-4px;
-        font-weight:700;
+        margin-top: -4px;
+        font-weight: 700;
     }
 
-    #button-blue:hover{
-        background-color: rgba(0,0,0,0);
+    #button-blue:hover {
+        background-color: rgba(0, 0, 0, 0);
         color: #0493bd;
     }
 
@@ -151,13 +255,13 @@
         transition: .3s ease;
     }
 
-    .submit:hover .ease{
-        width:100%;
-        background-color:white;
+    .submit:hover .ease {
+        width: 100%;
+        background-color: white;
     }
 
     @media only screen and (max-width: 580px) {
-        #form-div{
+        #form-div {
             left: 3%;
             margin-right: 3%;
             width: 88%;
@@ -170,17 +274,28 @@
 <div id="form-main" style="margin-top: -150px;">
     <div id="form-div">
         <h1 style="color: whitesmoke;margin-left: 32px;">LAST ROUND</h1>
-        <h2 style="color:whitesmoke; font-size: 18px;">Who is the president of IEEE-VIT?</h2>
+        <h2 style="color:whitesmoke; font-size: 18px;">Who is the current president of IEEE-VIT?</h2>
         <form class="form" id="form1" ng-submit="da.roun(formdata)">
-            <input  type="text"  placeholder="Enter your registration number" style="font-size: larger; width:100%;height: 25px;" ng-model="da.formdata.regnum" />
+            <br>
+            <p>
+            <span class="input">
+            <input type="text" placeholder="Registration">
+            <span></span>
+            </span>
+            </p>
+            <br>
+            <p>
+            <span class="input">
+            <input type="text" placeholder="Answer" ng-model="da.formdata.answ">
+            <span></span>
+            </span>
+            </p>
             <br>
             <br>
-            <textarea  type="text"  placeholder="Enter your Answer" style="font-size: larger; width:100%;height: 100px;" ng-model="da.formdata.answ" ></textarea>
-
-
             <div class="submit">
-                <input type="submit" value="SUBMIT" id="button-blue" />
+                <input type="submit" value="SUBMIT" id="button-blue"/>
                 <div class="ease"></div>
             </div>
         </form>
     </div>
+</div>

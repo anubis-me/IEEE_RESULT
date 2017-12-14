@@ -12,7 +12,7 @@ var answerSchema = new Schema({
 });
 
 // Mongoose Plugin to change fields to title case after saved to database (ensures consistency)
-memberSchema.plugin(titlize, {
+answerSchema.plugin(titlize, {
     paths: ['name']
 });
 

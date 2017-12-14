@@ -23,34 +23,19 @@
 }
 </style>
 
-<div id="black" ng-show="tran.loadm"></div>
-<div id="text"  ng-show="tran.loadm">IEEE VIT<br><span style="font-size:50%">RECRUITMENTS</span><br><span style="margin-left:100px;font-size:50%;">RESULTS</span><br><span style="font-size:50%">PAGE</span></div>
 
 <link rel=stylesheet type=text/css href=assets/css/regform.css>
 
-<div id="wrap" style="margin-top: 400px;">
-    <div id="container-question" style="margin-top: 290px;" ng-show="!tran.loadm">
-        <div style="margin:-50px auto;text-align:center;background-image:assets/images/circle.png;">
-            <img class=img-responsive2 src="assets/images/circle.png" style="width:250px;position:relative">
+<div id="wrap" style="margin-top: 370px;">
+    <div id="container-question" style="margin-top: 250px;" >
+        <div style="margin:-40px auto;text-align:center;background-image:assets/images/circle.png;">
+            <img class=img-responsive src="assets/images/circle.png" style="width:250px;position:relative">
         </div>
-        <h3 style="margin-top: 25px;">Enter Registration Number</h3>
+        <h3 style="margin-top: 45px;">Enter Registration Number</h3>
         <form ng-submit="tran.checkreg(regdata);" style="margin-top: -50px;">
-            <input type="text" name="regnum" placeholder="Reg number " id="user" ng-model="tran.regdata.regnum" style="border: whitesmoke" required>
+            <input type="text" name="regnum" placeholder="Reg number " ng-pattern="/^[0-9]{2}[a-z][A-Z]{3}{0-9}{4}$/" id="user" ng-model="tran.regdata.regnum"  style="border: whitesmoke" required>
             <input type="submit" value="CHECK" id="send" ng-click="tran.routechan();" />
         </form>
-    </div>
-    <div id="container" ng-show="tran.loadm" >
-        <span class="meshi1 mo"></span>
-        <span class="meshi2 mo"></span>
-        <span class="meshi3 mo"></span>
-        <span class="meshi4 mo"></span>
-        <span class="meshi5 mo"></span>
-        <span class="meshi6 mo"></span>
-        <br />
-        <br />
-        <br />
-        <br />
-        <h1>Loading ...</h1>
     </div>
 
 </div>

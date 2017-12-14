@@ -14,11 +14,7 @@ var app=angular.module('memberRoute',['ngRoute'])
                 controller  :'transition',
                 controllerAs:'tran'
             })
-            .when('/load', {
-                templateUrl  :'app/views/loadm.html',
-                controller  :'transition',
-                controllerAs:'tran'
-            })
+
             .when('/regsubmit', {
                 templateUrl  :'app/views/regnum.html',
                 controller  :'transition',

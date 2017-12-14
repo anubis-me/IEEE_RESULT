@@ -26,8 +26,7 @@ html, body {
     display: inline-block;
     position: relative;
     padding: 10%;
-    background-color: gray;
-}
+    background-color:2B2008}
 
 .flame:after, .flame:before {
     content: '';
@@ -40,7 +39,7 @@ html, body {
     height: 60%;
     left: 20%;
     top: 20%;
-    background-color: white;
+    background-color:#F2B632;
 }
 
 .flame:before {
@@ -48,7 +47,7 @@ html, body {
     height: 80%;
     left: 10%;
     top: 10%;
-    background-color: lightgray;
+    background-color:#FECF69;
 }
 
 

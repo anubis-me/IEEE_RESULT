@@ -10,7 +10,7 @@ module.exports = function (router) {
                 res.json({success: false, messages:"not rec"});
             }
             else{
-                res.json({success: true, messages:"rec"}); // Send success message back to controller/request
+                res.json({success: true, messages:"rec", regnum:mem.regnum, mess:mem.mess}); // Send success message back to controller/request
             }
         });
     });

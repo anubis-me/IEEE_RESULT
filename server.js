@@ -21,8 +21,7 @@ app.get('*',function (req, res) {                   // Rendering the index page 
 });
 
 //------------------------ Database connection with server--------------------------------------
-mongoose.connect('mongodb://abhi:abhi@ds137206.mlab.com:37206/ieeeresult' +
-    '', function(err) {
+mongoose.connect('mongodb://ieee:ieee@ds141406.mlab.com:41406/result', function(err) {
     if (err) {
         console.log('Not connected to the database: ' + err); // Console msg if unable to connect to database
     } else {

@@ -26,8 +26,8 @@ var app=angular.module('memberRoute',['ngRoute'])
             })
             .when('/surprise', {
                 templateUrl  :'app/views/surprise.html',
-                controller  :'transition',
-                controllerAs:'tran'
+                controller  :'formda',
+                controllerAs:'da'
             })
 
             .when('/selected', {
@@ -36,9 +36,7 @@ var app=angular.module('memberRoute',['ngRoute'])
                 controllerAs:'tran'
             })
             .when('/nselected', {
-                templateUrl  :'app/views/nselected.html',
-                controller  :'transition',
-                controllerAs:'tran'
+                templateUrl  :'app/views/nselected.html'
             })
 
             .when('/nohack', {

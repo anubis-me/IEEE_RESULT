@@ -167,14 +167,15 @@
         }
     }
 </style>
-<div id="form-main">
+<div id="form-main" style="margin-top: -150px;">
     <div id="form-div">
-        <h1 style="color: whitesmoke">IEEE SURPRISE ROUND</h1>
-        <br>
-        <h2 style="color: gray;margin-top: 25px;">{{tran.mess}}</h2>
-
-        <form class="form" id="form1" ng-submit="tran.roun(formdata)">
-            <textarea  type="text"  placeholder="Enter your Answer" style="font-size: larger; width:100%;height: 100px;" ng-model="tran.formdata.name" ></textarea>
+        <h1 style="color: whitesmoke;margin-left: 32px;">LAST ROUND</h1>
+        <h2 style="color:whitesmoke; font-size: 18px;">Who is the president of IEEE-VIT?</h2>
+        <form class="form" id="form1" ng-submit="da.roun(formdata)">
+            <input  type="text"  placeholder="Enter your registration number" style="font-size: larger; width:100%;height: 25px;" ng-model="da.formdata.regnum" />
+            <br>
+            <br>
+            <textarea  type="text"  placeholder="Enter your Answer" style="font-size: larger; width:100%;height: 100px;" ng-model="da.formdata.answ" ></textarea>
 
 
             <div class="submit">

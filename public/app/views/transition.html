@@ -1,13 +1,13 @@
 <style>
 
     body {
-        background-color: rgba(44, 62, 80,1.0);
+        background-color: black;
     }
 
-    h1 {
+    p {
         text-align: center;
         color: rgba(236, 240, 241,1.0);
-        font-family: 'Yanone Kaffeesatz';
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-weight: 100;
         text-shadow: 1px 1px 3px black;
     }
@@ -135,7 +135,10 @@
     <div class="water_drop"></div>
     <div class="glass"></div>
 </div>
-<h1 ng-show="tran.one">Ready for your result ?</h1>
-<h1 ng-show="tran.two">Do you want a drink ?</h1>
-<h1 ng-show="tran.three">Please don't panic</h1>
-<h1 ng-show="tran.four">It's gonna be alright</h1>
+<p ng-show="tran.one" style="font-size: 160%">Ready for your result ?</p>
+<p ng-show="tran.two" style="font-size: 160%">Do you want a drink ?</p>
+<p ng-show="tran.three"style="font-size: 160%">Please don't panic.</p>
+<p ng-show="tran.four"style="font-size: 160%">It's gonna be alright.</p>
+<div style="margin:0 auto;text-align:center;">
+<a href="/regsubmit"  ><button ng-show="tran.five" style="font-size: 32px;background-color:#F2B632;!important font-color:black;border: black;margin-left:auto;margin-right:auto;text-align:center;"><b>Click to continue</button></a>
+</div>

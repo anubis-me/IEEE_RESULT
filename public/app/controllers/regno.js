@@ -2,10 +2,10 @@ angular.module('memberController',['memberService'])
 
 .controller("transition",function ($http,$timeout,$location,postreg) {
     var app = this;
-    app.regnum="";
+    var regnum='';
     app.loadm=true;
     app.lo=true;
-    app.one=true; app.two=false; app.three=false; app.four=false;
+    app.one=true; app.two=false; app.three=false; app.four=false;app.five=false;
     $timeout(function () {
         app.one=false;
         app.two=true;
@@ -18,15 +18,14 @@ angular.module('memberController',['memberService'])
         app.three=false;
         app.four=true;
     }, 6000);
-    if(app.regnum=='')
-    {
-        $timeout(function () {
-            $location.path('/regsubmit');
-        }, 8000);
-    }
+
     $timeout(function () {
-        app.loadm=false;
-        }, 2500);
+          app.four=false;
+          app.five=true;
+    }, 8000);
+    $timeout(function () {
+       app.loadm=false;
+      }, 2500);
 
     //input counter fest type message
     this.checkreg = function (regdata) {
@@ -34,9 +33,8 @@ angular.module('memberController',['memberService'])
        $timeout(function () {
            postreg.regpost(app.regdata).then(function (data) {
                if(data.data.success==false){
-                   var reg= "lol";
+                   var reg= "true";
                    localStorage.setItem("token2",reg);
-                   app.regnum = localStorage.getItem("token2");
                    $location.path('/nselected');
                }
                else if(data.data.success==true){
@@ -45,22 +43,25 @@ angular.module('memberController',['memberService'])
                    localStorage.setItem("token", token);
                    localStorage.setItem("token1", token1);
                    $location.path('/surprise');
-                   app.mess = localStorage.getItem("token");
-                   app.regnum = localStorage.getItem("token1");
+                   app.regnum=localStorage.getItem("token2");
                }
                else{
                    $location.path('/');
                     }
                 });
            },2000);
-    };
-    this.roun=function (formdata) {
-        $location.path('/load');
-        postreg.creater(app.formdata).then(function (data) {
-            $timeout(function () {
-                $location.path('/selected');
-            }, 3000);
-        });
-    }
 
-});
+    };
+
+})
+    .controller("formda",function ($http,$timeout,$location,postreg) {
+        this.roun=function (formdata) {
+            $location.path('/load');
+            postreg.creater(app.formdata).then(function (data) {
+                $timeout(function () {
+                    $location.path('/selected');
+                }, 2000);
+            });
+        }
+
+    });

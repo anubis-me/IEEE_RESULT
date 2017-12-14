@@ -26,13 +26,13 @@
 
 <link rel=stylesheet type=text/css href=assets/css/regform.css>
 
-<div id="wrap" style="margin-top: 370px;">
-    <div id="container-question" style="margin-top: 250px;" >
+<div id="wrap" style="margin-top: 330px;">
+    <div id="container-question" style="margin-top: 260px;" >
         <div style="margin:-30px auto;text-align:center;background-image:assets/images/circle.png;margin-left: 25px;">
             <img class=img-responsive src="assets/images/circle.png" style="width:250px;position:relative">
         </div>
-        <h3 style="margin-top: 45px;">Enter Registration Number</h3>
-        <form ng-submit="tran.checkreg(regdata);" style="margin-top: -50px;">
+        <h3 style="margin-top: 45px;">Enter Your Registration Number</h3>
+        <form ng-submit="tran.checkreg(regdata);" style="margin-top: -20px;">
             <input type="text" name="regnum" placeholder="Reg number "  id="user" ng-model="tran.regdata.regnum"  style="border: whitesmoke" required>
             <input type="submit" value="CHECK" id="send" ng-click="tran.routechan();" />
         </form>

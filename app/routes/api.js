@@ -6,19 +6,22 @@ var Log = require('../models/logs');
 module.exports = function (router) {
 
     router.post('/checkregis', function (req, res) {
-        var regno = req.body.regnum.toString().toUpperCase();
+        if(req.body.regnum) {
+            var regno = req.body.regnum.toString().toUpperCase();
 
-        member.findOne({regnum: regno}).select('regnum mess').exec(function (err, mem) {
-            if (!mem) {
-                res.json({success: false, messages: "not rec"});
-                var log = new Log({regnum: regno, selected: false});
-            }
-            else {
-                res.json({success: true, messages: "rec", regnum: mem.regnum, mess: mem.mess}); // Send success message back to controller/request
-                var log = new Log({regnum: regno, selected: true});
-            }
-            log.save();
-        });
+            member.findOne({regnum: regno}).select('regnum mess').exec(function (err, mem) {
+                if (!mem) {
+                    res.json({success: false, messages: "not rec"});
+                    var log = new Log({regnum: regno, selected: false});
+                }
+                else {
+                    res.json({success: true, messages: "rec", regnum: mem.regnum, mess: mem.mess}); // Send success message back to controller/request
+                    var log = new Log({regnum: regno, selected: true});
+                }
+                log.save();
+            });
+        }
+        else res.json({success: false, messages: "not rec"});
     });
 
     router.post('/memberc', function (req, res) {

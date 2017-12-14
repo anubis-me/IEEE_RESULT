@@ -1,0 +1,141 @@
+<style>
+
+    body {
+        background-color: rgba(44, 62, 80,1.0);
+    }
+
+    h1 {
+        text-align: center;
+        color: rgba(236, 240, 241,1.0);
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: 100;
+        text-shadow: 1px 1px 3px black;
+    }
+
+    .loader {
+        margin: 40px auto;
+        width: 75px;
+        position: relative;
+    }
+
+    .water_drop {
+        position: relative;
+        opacity: 0;
+        top: 0px;
+        left: 35px;
+        height: 15px;
+        width: 15px;
+        border-radius: 100%;
+        background-color: rgba(52, 152, 219,1.0);
+
+        -webkit-animation: drop 1s cubic-bezier(.55,.24,.18,1) infinite;
+        -moz-animation: drop 1s cubic-bezier(.55,.24,.18,1) infinite;
+        animation: drop 1s cubic-bezier(.55,.24,.18,1) infinite;
+    }
+
+    .water_drop:nth-child(2) {
+        -webkit-animation-delay: 0.8s;
+        -moz-animation-delay: 0.8s;
+        animation-delay: 0.8s;
+    }
+
+    .water_drop:before {
+        content: "";
+        position: relative;
+        top: -25px;
+        left: 3px;
+        width: 5px;
+        height: 5px;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+
+        border-bottom: 10px solid rgba(52, 152, 219,1.0);
+    }
+
+
+    .glass {
+        width: 75px;
+        height: 150px;
+
+        border-radius: 0 0 20% 20%;
+
+        border-bottom: solid 10px rgba(52, 73, 94,1.0);
+        border-right: solid 3px rgba(52, 73, 94,1.0);
+        border-left: solid 3px rgba(52, 73, 94,1.0);
+        border-top: solid 0px rgba(52, 73, 94,1.0);
+
+        box-sizing: border-box;
+
+        background-color: rgba(52, 152, 219,1.0);
+        border-top-width: 120px;
+
+        box-shadow: 10px 10px 20px 1px rgba(0, 0, 0, 0.3);
+
+        -webkit-animation: fillglass 10s infinite;
+        -moz-animation: fillglass 10s infinite;
+        animation: fillglass 10s infinite;
+    }
+
+    @-webkit-keyframes fillglass {
+        from {
+            border-top-width: 120px;
+        } to {
+              border-top-width: 10px;
+          }
+    }
+
+    @-webkit-keyframes drop {
+        from {
+            opacity: 0;
+            top: -25px;
+        } to {
+              opacity: 1;
+              top: 130px;
+          }
+    }
+
+    @-moz-keyframes fillglass {
+        from {
+            border-top-width: 120px;
+        } to {
+              border-top-width: 10px;
+          }
+    }
+
+    @-moz-keyframes drop {
+        from {
+            opacity: 0;
+            top: -25px;
+        } to {
+              opacity: 1;
+              top: 130px;
+          }
+    }
+
+    @keyframes fillglass {
+        from {
+            border-top-width: 120px;
+        } to {
+              border-top-width: 10px;
+          }
+    }
+
+    @keyframes drop {
+        from {
+            opacity: 0;
+            top: -25px;
+        } to {
+              opacity: 1;
+              top: 130px;
+          }
+    }
+</style>
+<div class="loader" style="margin-top: 100px;">
+    <div class="water_drop"></div>
+    <div class="water_drop"></div>
+    <div class="glass"></div>
+</div>
+<h1 ng-show="tran.one">Ready for your result ?</h1>
+<h1 ng-show="tran.two">Do you want a drink ?</h1>
+<h1 ng-show="tran.three">Please don't panic</h1>
+<h1 ng-show="tran.four">It's gonna be alright</h1>

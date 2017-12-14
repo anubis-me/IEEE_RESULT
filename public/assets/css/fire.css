@@ -1,0 +1,75 @@
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background: black;
+}
+
+.fire {
+    position: fixed;
+    bottom: 0;
+    left: -7%;
+    width: 100%;
+    font-size: 1.5vmin;
+    letter-spacing: -4em;
+    white-space: nowrap;
+    animation: fire-shift 1s infinite alternate ease-in-out;
+}
+
+@keyframes fire-shift {
+    0%   { transform: translateY(50%); }
+    100% { transform: translateY(50%) translateX(3%); }
+}
+
+.flame {
+    display: inline-block;
+    position: relative;
+    padding: 10%;
+    background-color: gray;
+}
+
+.flame:after, .flame:before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+}
+
+.flame:after {
+    width: 60%;
+    height: 60%;
+    left: 20%;
+    top: 20%;
+    background-color: white;
+}
+
+.flame:before {
+    width: 80%;
+    height: 80%;
+    left: 10%;
+    top: 10%;
+    background-color: lightgray;
+}
+
+
+.flame {
+    animation: fire-scale .5s infinite alternate;
+}
+
+.flame:nth-child(2n) {
+    animation: fire-scale .4s infinite alternate;
+}
+
+.flame:nth-child(3n) {
+    animation: fire-scale .6s infinite alternate;
+}
+
+.flame:nth-child(4n) {
+    animation: fire-scale .7s infinite alternate;
+}
+
+@keyframes fire-scale {
+    0%   { transform: translateY(0%) scaleX(0.5) rotate(45deg); }
+    100% { transform: translateY(30%) rotate(45deg); }
+}
+</style>

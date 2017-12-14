@@ -116,7 +116,8 @@
 
     #form-main {
         width: 100%;
-        float: left;
+       margin-left: auto;
+        margin-right: auto;
         padding-top: 0px;
     }
 
@@ -128,7 +129,7 @@
         padding-bottom: 50px;
         width: 450px;
         float: left;
-        left: 50%;
+        left: 32%;
         position: absolute;
         margin-top: 30px;
         margin-left: -260px;
@@ -262,16 +263,16 @@
 
     @media only screen and (max-width: 580px) {
         #form-div {
-            left: 3%;
+            left: 1%;
             margin-right: 3%;
-            width: 88%;
+            width: auto;
             margin-left: 0;
             padding-left: 3%;
             padding-right: 3%;
         }
     }
 </style>
-<div id="form-main" style="margin-top: -190px;">
+<div id="form-main" style="margin-top: -150px;">
     <div id="form-div" style="margin-left: 8px;">
         <h1 style="color: whitesmoke;margin-left: 32px;">LAST ROUND</h1>
         <h2 style="color:whitesmoke; font-size: 18px;">Who is the current president of IEEE-VIT?</h2>
@@ -279,7 +280,7 @@
             <br>
             <p>
             <span class="input">
-            <input type="text" placeholder="Your Registration No" ng-model="da.formdata.regnum">
+            <input type="text" placeholder="Your Registration" ng-model="da.formdata.regnum">
             <span></span>
             </span>
             </p>

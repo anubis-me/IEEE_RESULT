@@ -6,8 +6,7 @@ var titlize  = require('mongoose-title-case'); // Import Mongoose Title Case Plu
 
 // Wish Mongoose Schema
 var memberSchema = new Schema({
-    mess       : { type: String, required: true },
-    regnum     : { type: String, required: true }
+    regnum     : { type: String, required: true, unique: true }
 
 });
 

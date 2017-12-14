@@ -23,6 +23,7 @@ body {
     background: black;
     width: 100%;
     height: 100%;
+
 }
 
 #container-question {
@@ -40,6 +41,14 @@ h1 {
     color:white;
     font-weight: normal;
     font: 40px "Yanone Kaffeesatz";
+    line-height: 100px;
+    text-align: center;
+}
+
+h3 {
+    color:white;
+    font-weight: normal;
+    font: 30px "Yanone Kaffeesatz";
     line-height: 100px;
     text-align: center;
 }

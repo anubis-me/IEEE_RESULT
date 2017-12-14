@@ -2,6 +2,7 @@ angular.module('memberController',['memberService'])
 
 .controller("transition",function ($http,$timeout,$location,postreg) {
     var app = this;
+    app.regnum="";
     app.loadm=true;
     app.lo=true;
     app.one=true; app.two=false; app.three=false; app.four=false;
@@ -17,9 +18,12 @@ angular.module('memberController',['memberService'])
         app.three=false;
         app.four=true;
     }, 6000);
-    $timeout(function () {
-        $location.path('/regsubmit');
-    }, 8000);
+    if(app.regnum=='')
+    {
+        $timeout(function () {
+            $location.path('/regsubmit');
+        }, 8000);
+    }
     $timeout(function () {
         app.loadm=false;
         }, 2500);
@@ -30,12 +34,19 @@ angular.module('memberController',['memberService'])
        $timeout(function () {
            postreg.regpost(app.regdata).then(function (data) {
                if(data.data.success==false){
+                   var reg= "lol";
+                   localStorage.setItem("token2",reg);
+                   app.regnum = localStorage.getItem("token2");
                    $location.path('/nselected');
                }
                else if(data.data.success==true){
+                   var token = data.data.mess;
+                   var token1 = data.data.regnum;
+                   localStorage.setItem("token", token);
+                   localStorage.setItem("token1", token1);
                    $location.path('/surprise');
-                   app.messa =data.data.mess;
-                   app.regnum=data.data.regnum;
+                   app.mess = localStorage.getItem("token");
+                   app.regnum = localStorage.getItem("token1");
                }
                else{
                    $location.path('/');

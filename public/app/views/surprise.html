@@ -171,11 +171,10 @@
     <div id="form-div">
         <h1 style="color: whitesmoke">IEEE SURPRISE ROUND</h1>
         <br>
-        <h2>{{tran.question}}</h2>
+        <h2 style="color: gray;margin-top: 25px;">{{tran.mess}}</h2>
 
         <form class="form" id="form1" ng-submit="tran.roun(formdata)">
-            <input  type="text"  placeholder="Enter your name" style="font-size: larger" ng-model="tran.formdata.name" ></input
-            <textarea  type="text"  placeholder="ENTER ANSWER" style="font-size: larger" ng-model="tran.formdata.answ" ></textarea
+            <textarea  type="text"  placeholder="Enter your Answer" style="font-size: larger; width:100%;height: 100px;" ng-model="tran.formdata.name" ></textarea>
 
 
             <div class="submit">

@@ -31,7 +31,6 @@
         <div style="margin:-30px auto;text-align:center;background-image:assets/images/circle.png;margin-left: 25px;">
             <img class=img-responsive src="assets/images/circle.png" style="width:250px;position:relative">
         </div>
-        <h3 style="margin-top: 45px;">Enter Your Registration Number</h3>
         <form ng-submit="tran.checkreg(regdata);" style="margin-top: -20px;">
             <input type="text" name="regnum" placeholder="Reg number "  id="user" ng-model="tran.regdata.regnum"  style="border: whitesmoke" required>
             <input type="submit" value="CHECK" id="send" ng-click="tran.routechan();" />

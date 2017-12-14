@@ -50,7 +50,7 @@ h3 {
     font-weight: normal;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 19px;
-    line-height: 30px;
+    line-height: 50px;
     text-align: center;
 }
 
@@ -77,7 +77,7 @@ p:after {
     height: 1px;
     width: 0%;
     color:white;
-    background-color: #444;
+    background-color: #fff;
     display: block;
     content: '';
     -webkit-transition: all 0.3s linear;
@@ -112,7 +112,7 @@ input {
 
 input[type='text']:hover {
     box-shadow: inset 400px 0 0 0 #000;
-    color: #FFF;
+    color: whitesmoke;
 }
 
 .black {
@@ -122,6 +122,7 @@ input[type='text']:hover {
 
 input[type='password']:hover {
     box-shadow: inset 400px 0 0 0 #000;
+
     color: #FFF;
 }
 
@@ -132,10 +133,12 @@ button   [type='button']:hover {
 
 
 ::-webkit-input-placeholder {
+
     color: #000;
-}
+    }
 
 :-moz-placeholder { /* Firefox 18- */
+
     color: #000;
 }
 
@@ -144,7 +147,7 @@ button   [type='button']:hover {
 }
 
 :-ms-input-placeholder {
-    color: #000;
+    color: #fff;
 }
 
 input:hover::-moz-placeholder {

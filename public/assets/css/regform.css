@@ -48,7 +48,8 @@ h1 {
 h3 {
     color:white;
     font-weight: normal;
-    font: 30px "Yanone Kaffeesatz";
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 19px;
     line-height: 100px;
     text-align: center;
 }

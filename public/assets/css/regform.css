@@ -115,10 +115,7 @@ input[type='text']:hover {
     color: whitesmoke;
 }
 
-.black {
-    box-shadow: inset 400px 0 0 0 #000;
-    color: #fff;
-}
+
 
 input[type='password']:hover {
     box-shadow: inset 400px 0 0 0 #000;
@@ -180,108 +177,6 @@ input:hover::-webkit-input-placeholder {
     opacity: 0;
 }
 
-.meshi1 {
-    border-top: 1.125em solid transparent;
-    border-right: none;
-    border-bottom: 1em solid transparent;
-    border-left: 1.875em solid #343436;
-    position: absolute;
-    transform: rotate(-1deg);
-    top: 0px;
-    left: 50%;
-    margin-top: 18.4px;
-    transform-origin: left bottom;
-    border-radius: 3px 3px 0 0;
-    -webkit-animation-delay: 0.3s;
-    animation-delay: 0.3s;
-}
-
-.meshi2 {
-    border-top: 1.125em solid transparent;
-    border-right: none;
-    border-bottom: 1em solid transparent;
-    border-left: 1.875em solid #343436;
-    position: absolute;
-    transform: rotate(-244deg);
-    transform: rotateY(180deg);
-    top: 0px;
-    left: 50%;
-    margin-top: 35.3px;
-    margin-left: 30px;
-    transform-origin: left bottom;
-    border-radius: 3px 3px 0 0;
-    -webkit-animation-delay: 0.6s;
-    animation-delay: 0.6s;
-}
-
-.meshi3 {
-    border-top: 1.125em solid transparent;
-    border-right: none;
-    border-bottom: 1em solid transparent;
-    border-left: 1.875em solid #343436;
-    position: absolute;
-    transform: rotate(124deg);
-    transform: rotateX(194deg);
-    top: 0px;
-    left: 50%;
-    margin-top: 19.4px;
-    transform-origin: left bottom;
-    border-radius: 3px 3px 0 0;
-    -webkit-animation-delay: 0.9s;
-    animation-delay: 0.9s;
-}
-
-.meshi4 {
-    border-top: 1.125em solid transparent;
-    border-right: none;
-    border-bottom: 1em solid transparent;
-    border-left: 1.875em solid #343436;
-    position: absolute;
-    transform: rotate(-61deg);
-    top: 0px;
-    left: 50%;
-    margin-left: -0.52px;
-    margin-top: 18px;
-    transform-origin: left bottom;
-    border-radius: 3px 3px 0 0;
-    -webkit-animation-delay: 1.8s;
-    animation-delay: 1.8s;
-}
-
-.meshi5 {
-    border-top: 1.125em solid transparent;
-    border-right: none;
-    border-bottom: 1em solid transparent;
-    border-left: 1.875em solid #343436;
-    position: absolute;
-    transform: rotate(600deg);
-    transform: rotateY(0deg);
-    top: 0px;
-    left: 50%;
-    margin-top: 35.3px;
-    margin-left: -30px;
-    transform-origin: left bottom;
-    border-radius: 3px 3px 0 0;
-    -webkit-animation-delay: 1.5s;
-    animation-delay: 1.5s;
-}
-
-.meshi6 {
-    border-top: 1.125em solid transparent;
-    border-right: none;
-    border-bottom: 1em solid transparent;
-    border-left: 1.775em solid #343436;
-    position: absolute;
-    transform: rotate(-60deg);
-    top: 0px;
-    left: 50%;
-    margin-top: 52.4px;
-    margin-left: -0.70px;
-    transform-origin: left bottom;
-    border-radius: 3px 3px 0 0;
-    -webkit-animation-delay: 1.2s;
-    animation-delay: 1.2s;
-}
 
 @-webkit-keyframes fadeIn {
     0% {

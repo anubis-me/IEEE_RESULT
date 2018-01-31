@@ -1,14 +1,14 @@
 var member = require('../models/member'); // Import User Model
-var Ans = require('../models/answer'); // Import User Model
-var Log = require('../models/logs');
+var Ans    = require('../models/answer'); // Import User Model
+var Log    = require('../models/logs');
 
 
 module.exports = function (router) {
 
     router.post('/checkregis', function (req, res) {
         if(req.body.regnum) {
-            var regno = req.body.regnum.toString().toUpperCase();
 
+            var regno = req.body.regnum.toString().toUpperCase();
             member.findOne({regnum: regno}).select('regnum mess').exec(function (err, mem) {
                 if (!mem) {
                     res.json({success: false, messages: "not rec"});
@@ -44,9 +44,9 @@ module.exports = function (router) {
 
     router.post('/answ', function (req, res) {
         var ans = new Ans();
-        ans.regnum = req.body.regnum;
+        ans.name = req.body.name;
         ans.answ = req.body.answ;
-        if (req.body.regnum === null || req.body.regnum === '' || req.body.answ === null || req.body.answ === '') {
+        if (req.body.name === null || req.body.name === '' || req.body.answ === null || req.body.answ === '') {
             res.json({success: false});
         }
         else {

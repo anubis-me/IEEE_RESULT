@@ -7,8 +7,7 @@ var titlize  = require('mongoose-title-case'); // Import Mongoose Title Case Plu
 // Wish Mongoose Schema
 var answerSchema = new Schema({
     answ       : { type: String, required: true },
-    regnum     : { type: String, required: true }
-
+    name     : { type: String, required: true }
 });
 
 // Mongoose Plugin to change fields to title case after saved to database (ensures consistency)

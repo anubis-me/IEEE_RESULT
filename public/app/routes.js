@@ -39,9 +39,6 @@ var app=angular.module('memberRoute',['ngRoute'])
                 templateUrl  :'app/views/hacker.html'
             })
 
-             .when('/loader', {
-                templateUrl  :'app/views/LOADER.html'
-            })
 
 
             .otherwise({ redirectTo: '/nohack' }); // If user tries to access any other route, redirect to home page

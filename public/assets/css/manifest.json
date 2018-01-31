@@ -1,10 +1,10 @@
 {
   "short_name": "IEEE",
-  "name": "IEEE RESULTS",
+  "name": "RECRUITMENT RESULTS",
   "icons": [
     {
       "src":"images.png",
-      "sizes": "192x192",
+      "sizes": "192x242",
       "type": "image/png"
     }
   ],

@@ -40,9 +40,7 @@ angular.module('memberController',['memberService'])
                       $location.path('/nselected');
                }
                else if(data.data.success==true){
-                   var token = data.data.mess;
-                   var token1 = data.data.regnum;
-                   $location.path('/surprise');
+                  $location.path('/surprise');
 
                }
                else{
